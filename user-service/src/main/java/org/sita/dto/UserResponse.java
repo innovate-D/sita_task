@@ -2,11 +2,11 @@ package org.sita.dto;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.AccessLevel;
-import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NonNull;
+import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
-import org.sita.entity.Order;
-import org.sita.entity.ProductPortfolio;
+import org.sita.entity.User;
 
 import java.time.Instant;
 import java.util.UUID;
@@ -14,28 +14,27 @@ import java.util.UUID;
 @Data
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class OrderResponse {
+
+public class UserResponse {
 
     UUID id;
     Instant createdAt;
+    User user;
     String message;
-    Order order;
 
-    public OrderResponse(UUID id, Instant createdAt){
+    public UserResponse(UUID id, Instant instant) {
         this.id = id;
-        this.createdAt = createdAt;
+        this.createdAt = instant;
     }
 
-    public OrderResponse(UUID id, String message){
+    public UserResponse(User user) {
+        this.user = user;
+    }
+
+    public UserResponse(UUID id,String message){
         this.id = id;
         this.message = message;
     }
 
-    public OrderResponse(Order order){
-        this.order = order;
-    }
 
-    public OrderResponse(String message){
-        this.message=message;
-    }
 }

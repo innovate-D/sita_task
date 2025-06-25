@@ -1,6 +1,5 @@
 package org.sita.entity;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.Data;
@@ -8,22 +7,24 @@ import lombok.experimental.FieldDefaults;
 
 import java.util.UUID;
 
-@Data
 @Entity
-@Table(name = "products")
+@Data
+@Table(name = "product_data")
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class Product {
+public class ProductPortfolio {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     UUID id;
 
     String productName;
-    int quantity;
+    int stock;
     int price;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JsonBackReference
-    @JoinColumn(name = "order_id",referencedColumnName = "id")
-    Order order;
+    public ProductPortfolio(String productName,int stock,int price){
+        this.productName=productName;
+        this.stock=stock;
+        this.price=price;
+    }
+
 }

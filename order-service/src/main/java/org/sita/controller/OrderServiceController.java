@@ -7,6 +7,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.UUID;
+
 @RestController
 @RequestMapping("/orders")
 public class OrderServiceController {
@@ -19,21 +21,21 @@ public class OrderServiceController {
 
     @PostMapping()
     public ResponseEntity<OrderResponse> postOrder(@RequestBody OrderRequest request){
-        return ResponseEntity.status(HttpStatus.CREATED).body(orderService.createNewOrder(request));
+        return ResponseEntity.status(HttpStatus.CREATED).body(orderService.createOrder(request));
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<OrderResponse> getOrder(@PathVariable Long id){
-        return ResponseEntity.status(HttpStatus.CREATED).body(orderService.getOrderById(id));
+    public ResponseEntity<OrderResponse> getOrder(@PathVariable UUID id){
+        return ResponseEntity.status(HttpStatus.CREATED).body(orderService.getOrder(id));
     }
-
-    @PutMapping("/{id}")
-    public ResponseEntity<OrderResponse> updateOrder(@PathVariable Long id){
-        return ResponseEntity.status(HttpStatus.CREATED).body(orderService.updateOrderById(id));
-    }
-
+//
+//    @PutMapping("/{id}")
+//    public ResponseEntity<OrderResponse> updateOrder(@PathVariable Long id){
+//        return ResponseEntity.status(HttpStatus.CREATED).body(orderService.updateOrderById(id));
+//    }
+//
     @DeleteMapping("/{id}")
-    public ResponseEntity<OrderResponse> deleteOrder(@PathVariable Long id){
-        return ResponseEntity.status(HttpStatus.CREATED).body(orderService.deleteAnOrder(id));
+    public ResponseEntity<OrderResponse> deleteOrder(@PathVariable UUID id){
+        return ResponseEntity.status(HttpStatus.CREATED).body(orderService.deleteOrder(id));
     }
 }

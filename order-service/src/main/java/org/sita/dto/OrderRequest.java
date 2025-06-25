@@ -2,9 +2,12 @@ package org.sita.dto;
 
 import lombok.AccessLevel;
 import lombok.Data;
+import lombok.NonNull;
 import lombok.experimental.FieldDefaults;
 import org.sita.entity.Product;
+import org.sita.entity.ProductPortfolio;
 
+import java.util.List;
 import java.util.UUID;
 
 @Data
@@ -12,8 +15,7 @@ import java.util.UUID;
 public class OrderRequest {
 
     UUID userId;
-    Product product;
-    int quantity;
-    int price;
+    List<Product> product;
+
 
 }
