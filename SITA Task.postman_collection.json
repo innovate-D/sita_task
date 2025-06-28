@@ -15,7 +15,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"userId\":\"efc0526e-d348-4c36-81b7-fe88e2ae4b13\",\r\n    \"product\":[\r\n        {\r\n        \"productName\":\"Iphone15\",\r\n        \"quantity\":50\r\n        },\r\n        {\r\n        \"productName\":\"Iphone16\",\r\n        \"quantity\":60\r\n        },\r\n        {\r\n        \"productName\":\"Iphone17\",\r\n        \"quantity\":90\r\n        }\r\n    ],\r\n    \"price\": 100\r\n\r\n}",
+							"raw": "{\r\n    \"userId\":\"385de684-ee8d-4c10-bd47-e369b79049c2\",\r\n    \"product\":[\r\n        {\r\n        \"productName\":\"Iphone15\",\r\n        \"quantity\":50\r\n        },\r\n        {\r\n        \"productName\":\"Iphone16\",\r\n        \"quantity\":60\r\n        },\r\n        {\r\n        \"productName\":\"Iphone17\",\r\n        \"quantity\":90\r\n        }\r\n    ],\r\n    \"recepientName\": \"\",\r\n    \"recepientAddress\":\"\"\r\n\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -42,7 +42,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8082/orders/1a37d779-13ea-45d3-b57d-1da42def3d0e",
+							"raw": "http://localhost:8082/orders/385de684-ee8d-4c10-bd47-e369b79049c2",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -50,7 +50,7 @@
 							"port": "8082",
 							"path": [
 								"orders",
-								"1a37d779-13ea-45d3-b57d-1da42def3d0e"
+								"385de684-ee8d-4c10-bd47-e369b79049c2"
 							]
 						}
 					},
@@ -62,7 +62,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8082/orders/70f52554-e1e9-4cc5-b0eb-29d74d788575",
+							"raw": "http://localhost:8082/orders/385de684-ee8d-4c10-bd47-e369b79049c2",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -70,7 +70,7 @@
 							"port": "8082",
 							"path": [
 								"orders",
-								"70f52554-e1e9-4cc5-b0eb-29d74d788575"
+								"385de684-ee8d-4c10-bd47-e369b79049c2"
 							]
 						}
 					},
@@ -91,7 +91,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8082/orders/2304e6f6-f2cf-4fcc-be5d-7d0b23935d04",
+							"raw": "http://localhost:8082/orders/385de684-ee8d-4c10-bd47-e369b79049c2",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -99,7 +99,7 @@
 							"port": "8082",
 							"path": [
 								"orders",
-								"2304e6f6-f2cf-4fcc-be5d-7d0b23935d04"
+								"385de684-ee8d-4c10-bd47-e369b79049c2"
 							]
 						}
 					},
@@ -117,7 +117,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"userName\":\"test-user-1\",\r\n    \"password\":\"test-pass-1\",\r\n    \"email\":\"test-email-1\"\r\n}",
+							"raw": "{\r\n    \"userName\":\"test-user-3\",\r\n    \"password\":\"test-pass-1\",\r\n    \"email\":\"test3-email@gmail.com\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -144,7 +144,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8083/users/062743b8-b705-40bb-8555-b46352c7c7b7",
+							"raw": "http://localhost:8083/users/b43fe4fd-5462-42b7-8c79-37831c526812",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -152,7 +152,7 @@
 							"port": "8083",
 							"path": [
 								"users",
-								"062743b8-b705-40bb-8555-b46352c7c7b7"
+								"b43fe4fd-5462-42b7-8c79-37831c526812"
 							]
 						}
 					},
@@ -173,7 +173,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8083/users/062743b8-b705-40bb-8555-b46352c7c7b7",
+							"raw": "http://localhost:8083/users/b43fe4fd-5462-42b7-8c79-37831c526812",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -181,7 +181,7 @@
 							"port": "8083",
 							"path": [
 								"users",
-								"062743b8-b705-40bb-8555-b46352c7c7b7"
+								"b43fe4fd-5462-42b7-8c79-37831c526812"
 							]
 						}
 					},
@@ -193,7 +193,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8083/users/062743b8-b705-40bb-8555-b46352c7c7b7",
+							"raw": "http://localhost:8083/users/b43fe4fd-5462-42b7-8c79-37831c526812",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -201,7 +201,7 @@
 							"port": "8083",
 							"path": [
 								"users",
-								"062743b8-b705-40bb-8555-b46352c7c7b7"
+								"b43fe4fd-5462-42b7-8c79-37831c526812"
 							]
 						}
 					},
