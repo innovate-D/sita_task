@@ -1,5 +1,6 @@
 package org.sita.controller;
 
+import jakarta.validation.Valid;
 import org.sita.dto.UserRequest;
 import org.sita.dto.UserResponse;
 import org.sita.service.UserService;

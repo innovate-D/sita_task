@@ -1,0 +1,213 @@
+{
+	"info": {
+		"_postman_id": "173cc943-06c6-4144-97ea-cf0c0293e4cb",
+		"name": "SITA Task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Order Service",
+			"item": [
+				{
+					"name": "Create New Order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\":\"efc0526e-d348-4c36-81b7-fe88e2ae4b13\",\r\n    \"product\":[\r\n        {\r\n        \"productName\":\"Iphone15\",\r\n        \"quantity\":50\r\n        },\r\n        {\r\n        \"productName\":\"Iphone16\",\r\n        \"quantity\":60\r\n        },\r\n        {\r\n        \"productName\":\"Iphone17\",\r\n        \"quantity\":90\r\n        }\r\n    ],\r\n    \"price\": 100\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/orders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Order By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/orders/1a37d779-13ea-45d3-b57d-1da42def3d0e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"orders",
+								"1a37d779-13ea-45d3-b57d-1da42def3d0e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Order By Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/orders/70f52554-e1e9-4cc5-b0eb-29d74d788575",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"orders",
+								"70f52554-e1e9-4cc5-b0eb-29d74d788575"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Order",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"recepientName\":\"dhruv\",\r\n    \"recepientAddress\":\"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/orders/2304e6f6-f2cf-4fcc-be5d-7d0b23935d04",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"orders",
+								"2304e6f6-f2cf-4fcc-be5d-7d0b23935d04"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User Service",
+			"item": [
+				{
+					"name": "Create New User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\":\"test-user-1\",\r\n    \"password\":\"test-pass-1\",\r\n    \"email\":\"test-email-1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/users/062743b8-b705-40bb-8555-b46352c7c7b7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"users",
+								"062743b8-b705-40bb-8555-b46352c7c7b7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User By Id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\":\"update-user-2\",\r\n    \"password\":\"\",\r\n    \"email\":\"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/users/062743b8-b705-40bb-8555-b46352c7c7b7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"users",
+								"062743b8-b705-40bb-8555-b46352c7c7b7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User By Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/users/062743b8-b705-40bb-8555-b46352c7c7b7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"users",
+								"062743b8-b705-40bb-8555-b46352c7c7b7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
