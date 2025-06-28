@@ -26,4 +26,6 @@ public class Product {
     @JsonBackReference
     @JoinColumn(name = "order_id",referencedColumnName = "id")
     Order order;
+
+
 }

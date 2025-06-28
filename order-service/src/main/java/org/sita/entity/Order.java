@@ -1,5 +1,6 @@
 package org.sita.entity;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.AccessLevel;
@@ -7,6 +8,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.FieldDefaults;
 
+import java.time.Instant;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
@@ -16,6 +18,7 @@ import java.util.UUID;
 @Table(name = "orders")
 @NoArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class Order {
 
     @Id
@@ -23,6 +26,10 @@ public class Order {
     UUID id;
 
     UUID userId;
+
+    String recepientName;
+    String recepientAddress;
+    Instant time;
 
     @JsonManagedReference
     @OneToMany(mappedBy = "order",cascade = CascadeType.ALL,orphanRemoval = true)

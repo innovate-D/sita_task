@@ -24,4 +24,5 @@ public class RootConfig {
                 .expireAfterWrite(60, TimeUnit.MINUTES));
         return manager;
     }
+
 }

@@ -11,4 +11,5 @@ public class RootConfig {
     public RestClient restClient() {
         return RestClient.builder().build();
     }
+
 }

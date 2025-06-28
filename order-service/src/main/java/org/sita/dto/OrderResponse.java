@@ -2,24 +2,25 @@ package org.sita.dto;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.AccessLevel;
-import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.experimental.FieldDefaults;
 import org.sita.entity.Order;
-import org.sita.entity.ProductPortfolio;
 
 import java.time.Instant;
+import java.util.List;
 import java.util.UUID;
 
 @Data
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @JsonInclude(JsonInclude.Include.NON_NULL)
+@NoArgsConstructor
 public class OrderResponse {
 
     UUID id;
     Instant createdAt;
     String message;
-    Order order;
+    List<Order> order;
 
     public OrderResponse(UUID id, Instant createdAt){
         this.id = id;
@@ -31,7 +32,7 @@ public class OrderResponse {
         this.message = message;
     }
 
-    public OrderResponse(Order order){
+    public OrderResponse(List<Order> order){
         this.order = order;
     }
 
